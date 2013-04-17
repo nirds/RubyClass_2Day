@@ -1,3 +1,10 @@
+module OtherThing
+	def initialize(name, color)
+		@name = name
+	end
+end
+
+
 module NamedThing
 	attr_accessor :name
 
