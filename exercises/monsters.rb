@@ -1,11 +1,11 @@
 $monsters = []
 
 $monsters << {
-	:name => 'Zombie',
-	:nocturnal => false,
-	:dangers => ['bites', 'scratches'],
-	:vulnerabilities => ['fire', 'decapitation'],
-	:legs => 2
+	name: 'Zombie',
+	nocturnal: false,
+	dangers: ['bites', 'scratches'],
+	vulnerabilities: ['fire', 'decapitation'],
+	legs: 2
 }
 $monsters << {
 	:name => 'Mummy',

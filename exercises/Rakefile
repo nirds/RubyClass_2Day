@@ -1,0 +1,24 @@
+task :display_names do 
+  File.open("names") do |f|
+    f.each do |line|
+      puts line
+    end
+  end
+end
+
+task :create_class_dir => [:rm_class] do
+  Dir.mkdir("class") unless Dir.exists?("class")
+end
+
+task :make_student_dirs => [:create_class_dir] do 
+  Dir.chdir("class")
+  File.open("../names") do |f|
+    f.each do |line|
+      Dir.mkdir(line.chomp)
+    end
+  end
+end
+
+task :rm_class do
+  system("rm -rf class") if Dir.exists?("class")
+end
