@@ -4,4 +4,7 @@ class MyCollection
   def each 
     "Renee"
   end
+
+  def <=>
+  end
 end

@@ -1,5 +1,10 @@
 require "#{File.dirname(__FILE__)}/pig_latin"
 
+# 1. if the word starts with consonants move all the consonants 
+  # to the end
+# 2. if the word starts with qu move qu to the end
+# 3. add ay to the word
+
 describe "#translate" do
   include PigLatinTranslator
 
