@@ -8,19 +8,30 @@ class Calculator
   end
 
   def sum(*n)
-    @num_calculations += 1
-    total = 0
-    n.flatten.each do |i|
-      total += i
-    end
-    total
+    n.flatten.inject(:+)
   end
 
   def multiply *args
-    total = 1
-    args.flatten.each do |i|
-      total *= i
-    end
-    total
+     args.flatten.inject(:*)
   end
+
+  def pow b, e
+    b**e
+  end
+
+  def fac(n)
+    return 1 if n <= 1
+    n * fac(n-1)
+    # fac_total = 1
+    # (1..n).to_a.reverse
+    # n.downto(1).each do |n|
+    #   fac_total *= n
+    # end
+    # # while n > 0
+    # #   fac_total *= n 
+    # #   n -= 1
+    # # end
+    # fac_total
+  end
+
 end
