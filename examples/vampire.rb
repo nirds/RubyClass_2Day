@@ -10,4 +10,23 @@ class Vampire < Monster
     @bite_vic_count += 1
     super
   end
+
+  # def method_missing(m, *args)
+  #   puts "Hello from Method missing!"
+  #   puts "You called #{m} with"
+  #   bite(1)
+  # end
+
+  def method_missing(meth, *args, &block)
+    puts "You called #{meth} with #{args.join(' ')}"
+    puts "#{self}"
+    self.class.class_eval do
+      define_method(meth) do
+        yield
+      end
+    end
+
+    self.send(meth)
+  end
+
 end

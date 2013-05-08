@@ -1,13 +1,13 @@
 class Object
-	def Object.call_chain
+	def call_chain
 		"Object"
 	end
 end
 
 class Animal
-	# def call_chain
-	# 	"Animal.#{super}"
-	# end
+	def call_chain
+		"Animal.#{super}"
+	end
 end
 
 module NamedThing
@@ -17,22 +17,23 @@ module NamedThing
 end
 
 module Speaker
-	# def call_chain
-	# 	"Speaker.#{super}"
-	# end
+	def call_chain
+		"Speaker.#{super}"
+	end
 end
 
 class Person < Animal
-	include NamedThing
 	include Speaker
-	def call_chain(arg)
+	include NamedThing
+	
+	def call_chain
 		"Person.#{super}"
 	end
 end
 
 class Renee < Person
-	def call_chain(arg, arg1)
-		"#{self}.#{super(arg)}"
+	def call_chain
+		"#{self}.#{super}"
 	end
 end
 
