@@ -14,11 +14,7 @@ task :say_renee => [:say_world] do
 end
 
 task :say_names do
-  File.open("names") do |f|
-    f.each do |line|
-      puts line
-    end
-  end
+  open_file_yields_lines { |l| puts l }
 end
 
 task :create_class_dir do
@@ -26,10 +22,15 @@ task :create_class_dir do
 end
 
 task :create_student_dir => [:create_class_dir] do
-  File.open("names") do |f|
-    Dir.chdir("class")
-    f.each do |name|
-      Dir.mkdir("#{name.chomp}")
+  open_file_yields_lines do |l|
+    Dir.mkdir("class/#{l}")
+  end
+end
+
+def open_file_yields_lines file_name="names"
+  File.open(file_name) do |f|
+    f.each do |line|
+      yield line.chomp
     end
   end
 end
