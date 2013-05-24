@@ -13,7 +13,7 @@ describe "#translate" do
     s.should == "appleay"
   end
 
-  it "should translate a two consonent word: stupid" do
+  it "should translate a two consonant word: stupid" do
     s = translate("stupid")
     s.should == "upidstay"
   end
