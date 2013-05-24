@@ -9,20 +9,12 @@ class Calculator
 
   def sum *args
     @num_calculations += 1
-    total = 0
-    args.flatten.each do |i|
-      total += i
-    end
-    total
+    args.flatten.inject(:+)
   end
 
   def multiply *args
     @num_calculations += 1
-    total = 1
-    args.flatten.each do |i|
-      total *= i
-    end
-    total
+    args.flatten.inject(:*)
   end
 
   def pow base, exp
