@@ -35,3 +35,6 @@ $monsters << {
 	:vulnerabilities => ['CO2', 'ice', 'cold'],
 	:legs => 0
 }
+
+puts "How many monsters are nocturnal?"
+puts $monsters.count{|m| m[:nocturnal]}
