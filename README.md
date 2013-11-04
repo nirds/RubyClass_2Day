@@ -13,3 +13,18 @@ Git-Svn Crash Course: http://git.or.cz/course/svn.html
 Git Immersion: http://gitimmersion.com/
 
 ANSICON Instructions: http://qastuffs.blogspot.com/2011/02/how-to-install-ansicon-for-cucumber-to.html
+
+
+Color Fix for Windows 7:
+
+I do want to share info about a console editor:  My laptop runs Windows7 x64 and  I was never able to get ansicon to work properly -- the control characters that should change the color of text (i.e. red & green for testing) would never really work.  I researched & found that I was far from alone.
+
+I came across ConEmu (for "console emulator") and it's great.  You can open up multiple tabbed console windows, and you can set up commands (called "tasks" in ConEmu") to customize and start different console windows/tabs. The control characters are interpreted correctly (they change the text color as they should)   https://code.google.com/p/conemu-maximus5/
+
+In case someone else wants to use it, here is the setup for it to run the RailsInstaller/git environment:
+
+Task parameter: /Dir "C:\RailsInstaller\Ruby1.9.3"
+
+command: cmd /k C:\RailsInstaller\Ruby1.9.3\setup_environment.bat C:\RailsInstaller -new_console
+
+(That will make sense in ConEmu.)  That will create a new console window/tab, will run setup_environment.bat, and will change to the RailsInstaller\Ruby1.9.3 directory.
