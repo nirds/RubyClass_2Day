@@ -5,7 +5,7 @@ Ruby on Rails 5 Day BootCamp
 
 Resources: 
 
-Free Online Text-Book: http://www.ruby-doc.org/docs/ProgrammingRuby/ (older edition, but should be fine for this week's reading.)
+Free Online Text-Book: http://www.ruby-doc.org/docs/ProgrammingRuby/ (older edition)
 
 Rspec Matchers: http://rubydoc.info/gems/rspec-expectations/2.4.0/RSpec/Matchers
 
