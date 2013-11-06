@@ -4,6 +4,7 @@ describe Worker do
 
 	it "executes a block and returns a string" do
 		result = Worker.work do
+			puts "hello"
 			"hello"
 		end
 		result.should == "hello"
