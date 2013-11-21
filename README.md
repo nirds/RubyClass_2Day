@@ -13,3 +13,7 @@ Git-Svn Crash Course: http://git.or.cz/course/svn.html
 Git Immersion: http://gitimmersion.com/
 
 ANSICON Instructions: http://qastuffs.blogspot.com/2011/02/how-to-install-ansicon-for-cucumber-to.html
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nirds/rubyclass_2day/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
