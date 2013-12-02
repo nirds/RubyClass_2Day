@@ -77,7 +77,7 @@ describe "The Rspec ruby gem" do
       # Fix the Failing Test
       # Order of Operations is Please Excuse My Dear Aunt Sally:
       # Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-      (1+2-5*6/2).should eq -12
+      (1+2-5*6/2).should eq -13
     end
     it "should count the characters in your name" do
       pending "make a test to count the characters in your name" do
