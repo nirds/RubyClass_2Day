@@ -35,3 +35,14 @@ $monsters << {
 	:vulnerabilities => ['CO2', 'ice', 'cold'],
 	:legs => 0
 }
+
+
+
+dangers = $monsters.flat_map{|m| m[:dangers]}
+histogram = dangers.inject(Hash.new(0)) do |hist, danger|
+	hist[danger] += 1
+	hist
+end
+histogram.sort_by{|k,v| v }[-2..-1] 
+
+
