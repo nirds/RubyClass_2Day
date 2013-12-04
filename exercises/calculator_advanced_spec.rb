@@ -8,19 +8,19 @@ describe Calculator do
 
   describe "#sum" do
     it "computes the sum of an empty array" do
-      @calculator.sum([]).should == 0
+      @calculator.sum([],0,:+).should == 0
     end
     
     it "computes the sum of an array of one number" do
-      @calculator.sum([7]).should == 7
+      @calculator.sum([7],0,:+).should == 7
     end
     
     it "computes the sum of an array of two numbers" do
-      @calculator.sum([7,11]).should == 18
+      @calculator.sum([7,11],0,:+).should == 18
     end
     
     it "computes the sum of an array of many numbers" do
-      @calculator.sum([1,3,5,7,9]).should == 25
+      @calculator.sum([1,3,5,7,9],0,:+).should == 25
     end
   end
   
@@ -28,11 +28,11 @@ describe Calculator do
   # write tests and code for the following:
   describe "#multiply" do
     it "multiplies two numbers" do
-    @calculator.multiply(2,2).should eq 4
+    @calculator.multiply(2,2,1,:*).should eq 4
   end
 
     it "multiplies an array of numbers" do
-    @calculator.multiply([2,2]).should eq 4
+    @calculator.multiply([2,2],1,:*).should eq 4
     end
   end
   

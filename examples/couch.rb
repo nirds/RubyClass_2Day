@@ -1,4 +1,6 @@
 class Couch
+	#attr_accessor :pillows, :cushions, :dogs
+
 	def initialize(pillows, cushions, dogs)
 		@pillows = pillows
 		@cushions = cushions

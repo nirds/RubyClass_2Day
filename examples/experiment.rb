@@ -1,32 +1,33 @@
 class Object
 	def call_chain
-		"Object"
+		"#{self}"
 	end
 end
 
 class Animal
 	 def call_chain
-	 	"Animal.#{super}"
+	 	"#{self}.#{super}"
 	 end
 end
 
 module NamedThing
 	def call_chain
-		"NamedThing.#{super}"
+		"#{self}.#{super}"
 	end
 end
 
 module Speaker
 	def call_chain
-	 	"Speaker.#{super}"
+	 	"#{self}.#{super}"
 	end
 end
 
 class Person < Animal
-	include NamedThing
 	include Speaker
+	include NamedThing
+
 	def call_chain
-		"Person.#{super}"
+		"#{self}.#{super}"
 	end
 end
 

@@ -6,22 +6,22 @@ class Calculator
     @num_calculations = 0
   end
 
-  def sum *args
-    @num_calculations += 1
-    total = 0
-    args.flatten.each do |i|
-      total += i
+  [:sum, :multiply].each do |m|
+    define_method m do |*args, start_value, operation|
+      @num_calculations += 1
+      args.flatten.inject(start_value, operation)
     end
-    total
   end
 
-  def multiply *args
-    total = 1
-    args.flatten.each do |i|
-      total *= i
-    end
-    total
-  end
+  # def sum *args
+  #   @num_calculations += 1
+  #   args.flatten.inject(0, :+)
+  # end
+
+  # def multiply *args
+  #   @num_calculations += 1
+  #   args.flatten.inject(1, :*)
+  # end
 
   def pow base, exp
     base**exp

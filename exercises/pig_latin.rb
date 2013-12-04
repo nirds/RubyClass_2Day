@@ -4,7 +4,6 @@ module PigLatinTranslator
     sentance.split.map{|w| trans_word(w)}.join(" ")
   end
 
-private
 
   def trans_word(w)
     r = /qu|^[^aeiou]*/

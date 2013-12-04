@@ -1,0 +1,16 @@
+odulemay igLatinTranslatorPay
+
+efday anslate(sentance)tray
+entance.split.map{|w|say ans_word(w)}.join("tray ")ay
+enday
+
+
+efday ans_word(w)tray
+ray =ay u|^[^aeiou]*//qay
+artstay =ay ice(r)w.slay
+iay =ay art.sizestay
+lay =ay izew.say
+i..l]w[ay +ay artstay +ay ay''ay
+enday
+
+enday
