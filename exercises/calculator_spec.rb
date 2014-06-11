@@ -8,7 +8,7 @@ describe Calculator do
     Calculator.new.num_calculations.should == 0
   end
   it "should add 0 + 0 and return 0" do
-    Calculator.new.sum(0,0).should == 0      
+    Calculator.new.sum(0,0).should == 0
   end
 
   it "should add 1 + 3 and return 4" do
@@ -21,7 +21,6 @@ describe Calculator do
   end
 
   it "should increment the number of calculations" do
-    pending
     c = Calculator.new
     c.sum(1,1)
     c.num_calculations.should == 1
