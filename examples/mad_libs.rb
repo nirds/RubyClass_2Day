@@ -1,6 +1,8 @@
+require 'pry'
 puts "Please enter a noun"
 noun = gets.chomp
 puts "Please enter an adjective"
+binding.pry
 adjective = gets.chomp
 puts "Please enter a past tense action verb"
 verb_past_tense = gets.chomp

@@ -6,8 +6,43 @@ class Calculator
     @name = name
   end
 
-  def sum a,b
+  def sum *args
     @num_calculations += 1
-    a+b
+   # first way:
+   #  sum = 0
+   #  args.flatten.each do |n|
+   #    sum += n
+   #  end
+   #  sum
+   # second way:
+   # sum = args.flatten.inject(:+)
+   # sum ||= 0
+   # third way:
+   # args.flatten.inject(:+) || 0
+   # fourth way:
+   args.flatten.inject(0, :+)
   end
+
+  def multiply *args
+    args.flatten.inject :*
+  end
+
+  def pow base, exp
+    base ** exp
+    #a = Array.new(exp, base)
+    #multiply a
+  end
+
+  def fac n
+    (1..n).inject(:*) || 1
+  end
+
 end
+
+
+
+
+
+
+
+

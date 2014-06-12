@@ -33,4 +33,13 @@ describe Worker do
 		result.should == 8
 	end
 
+	it "executes a block 5 times and returns the result" do
+		n = 5
+		result = Worker.work(5) do
+			n += 1
+		end
+		result.should == 10
+	end
+
+
 end
