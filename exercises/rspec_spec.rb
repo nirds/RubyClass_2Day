@@ -1,7 +1,7 @@
 # encoding: utf-8
-
+require 'rspec/collection_matchers'
 describe "The Rspec ruby gem" do
-  
+
   context "Domain Specific Language" do
 
     it "creates examples with the #it keyword" do
@@ -67,7 +67,7 @@ describe "The Rspec ruby gem" do
     end
 
     it "should check how to spell my name" do
-      "Renée".should include("ée") 
+      "Renée".should include("ée")
     end
 
   end
@@ -80,11 +80,10 @@ describe "The Rspec ruby gem" do
       (1+2-5*6/2).should eq -13
     end
     it "should count the characters in your name" do
-      pending "make a test to count the characters in your name" do
-        "Name".should have(5).characters
-      end
+      pending "make a test to count the characters in your name"
+      "Name".should have(5).characters
     end
-    
+
     it "should check basic math" do
       pending "make a test to check some basic math"
     end
