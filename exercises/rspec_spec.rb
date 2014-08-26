@@ -1,5 +1,6 @@
 # encoding: utf-8
 require 'rspec/collection_matchers'
+require_relative 'spec_helper'
 describe "The Rspec ruby gem" do
 
   context "Domain Specific Language" do
