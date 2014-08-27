@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'rspec/collection_matchers'
 require_relative 'spec_helper'
+
 describe "The Rspec ruby gem" do
 
   context "Domain Specific Language" do
@@ -78,18 +79,19 @@ describe "The Rspec ruby gem" do
       # Fix the Failing Test
       # Order of Operations is Please Excuse My Dear Aunt Sally:
       # Parentheses, Exponents, Multiplication, Division, Addition, Subtraction
-      (1+2-5*6/2).should eq -13
+      (1+2-5*6/2).should eq -12
     end
     it "should count the characters in your name" do
-      pending "make a test to count the characters in your name"
-      "Name".should have(5).characters
+      "Tom".should have(3).characters
     end
 
     it "should check basic math" do
-      pending "make a test to check some basic math"
+      (-42-2).should eq -44
     end
 
-    it "should check basic spelling"
+    it "should check basic spelling" do
+      "field".should include('ie')
+    end
 
   end
 
