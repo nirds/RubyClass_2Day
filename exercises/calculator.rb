@@ -10,20 +10,13 @@ class Calculator
 
   def sum *a
     @num_calculations += 1
-    sum = 0
-    a.flatten.each do |i|
-      sum += i
-    end
-    sum
+    a.flatten.inject(:+)
   end
+  alias_method :add, :sum
 
   def multiply *args
     @num_calculations += 1
-    product = 1
-    args.flatten.each do |i|
-      product *= i
-    end
-    product
+    a.flatten.inject(:*)
   end
 
   def pow base, exp
