@@ -1,6 +1,6 @@
 class Object
 	def call_chain
-		"Object"
+		"Object#{self}"
 	end
 end
 
@@ -33,6 +33,19 @@ end
 class Renee < Person
 	def call_chain
 		"#{self}.#{super}"
+	end
+
+	def method_missing m, *args, &block
+		puts "hi from method missing!"
+		puts " you called #{m} with #{args}"
+		self.class.class_eval do
+			define_method(m) do |&other_b|
+				puts "method #{m}"
+				block.call if block_given?
+				other_b.call
+			end
+		end
+		self.send(m) { puts "other block"}
 	end
 end
 
